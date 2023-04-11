@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css" type="text/css">
+    <title>Tela de Login</title>
+
+</head>
+<body>
+
+    <div class="tela">
+
+        <img src="img/logo.png" class="logo">
+        <h3>Digite Login e Senha</h3>
+        <input type="text" placeholder="Login" id="login">
+        <br><br>
+        <input type="password" placeholder="Senha" id="senha"> 
+        <br><br>
+        <input type="checkbox">
+        <label>Lembre de mim</label>
+        <br><br>
+        <!-- <button onclick="logar()">Enviar</button> -->
+        <input type="submit" class="botao" onclick="logar()">
+    </div> 
+ 
+
+    
+    <script>
+
+        function logar(){
+
+            var login = document.getElementById('login').value; /* recebe o valor que está no campo login */
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha=="admin"){
+                location.href="home.html"
+            }
+            else{
+                alert('Usuário ou senha incorretos');
+                document.getElementById('login').value=''; /* Limpa os campos */
+                document.getElementById('senha').value=''; /* Limpa os campos */
+            }
+
+        }
+    </script>
+
+
+
+
+</html> 
